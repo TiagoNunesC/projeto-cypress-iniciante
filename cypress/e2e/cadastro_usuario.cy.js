@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
 import commum_page from '../support/pages/commum_page';
 import cadastro_page from '../support/pages/cadastro_usuario_page';
 
-describe('Cadastro de usuário', () => {
+describe('Cadastro Usuário', () => {
 
     beforeEach('Acessar cadastro de usuário', () => {
         commum_page.acessarCadastroUsuario()
