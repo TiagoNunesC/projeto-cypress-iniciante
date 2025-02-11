@@ -32,7 +32,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 name: Relarório           
-                path: cypress\reports\html
+                path: cypress/reports/html
 
 
 
