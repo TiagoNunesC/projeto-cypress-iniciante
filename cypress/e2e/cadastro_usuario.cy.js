@@ -7,7 +7,7 @@ import cadastro_page from '../support/pages/cadastro_usuario_page';
 
 describe('Cadastro do usuário', () => {
 
-    beforeEach('Acessar cadastro de usuário', () => {
+    beforeEach('Acessar cadastro do usuário', () => {
         commum_page.acessarCadastroUsuario()
     });
 
