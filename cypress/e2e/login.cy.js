@@ -10,7 +10,7 @@ describe('Login', () => {
         commum_page.acessarLoginUsuario();
     });
 
-    it('Campo E-mail vazio', () => {
+    it('Campo de E-mail vazio', () => {
         login_page.clicarLogin();
         login_page.validarMensagemErro('E-mail inválido.');
     });
