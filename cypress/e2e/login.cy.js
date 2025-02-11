@@ -35,7 +35,7 @@ describe('Login', () => {
 
     })
 
-    it.only('Login com sucesso', () => {
+    it('Login com sucesso', () => {
         const email = faker.internet.email()
         
         login_page.preencheEmail(email);
