@@ -1,0 +1,42 @@
+# nome da pipeline
+name: Run Basic Testes - Scheduler
+
+# em que momento será executada
+on:
+  schedule:
+     - cron: '0 20,22,23 * * 1-5'   # <=== Change this value 
+
+jobs:
+    # o que vai ser feito nessa pipeline
+    # só teremos um job: rodar os testes
+    cypress-run:
+        # maquina que será executado
+        runs-on: ubuntu-latest
+
+        # passo a passo para rodar os testes
+        steps:
+            # clone do projeto
+            - name: Checkout/Clone do projeto
+              uses: actions/checkout@v4
+              
+            # exemplo de execução no terminal    
+            - name: Run testes
+              uses: cypress-io/github-action@v6
+              with: 
+                record: true
+              env:
+                CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+            # upload relatório
+            - name: upload relarótio
+              uses: actions/upload-artifact@v4
+              with:
+                name: Relarório           
+                path: cypress/reports/html
+
+
+
+
+
+
+
